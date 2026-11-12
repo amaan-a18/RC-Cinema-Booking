@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/*
+  RC Cinemas design tokens: a dark house, gold marquee accent.
+  Display: Oswald (condensed, poster-style headings). Body: Inter.
+  Seat status colors: teal = available, gold = selected, slate = taken.
+*/
+@theme {
+  --font-display: "Oswald", "Segoe UI", sans-serif;
+  --font-sans: "Inter", "Segoe UI", sans-serif;
+
+  --color-bg: #0b0b0d;
+  --color-surface: #16161a;
+  --color-surface-soft: #1f1f24;
+  --color-ink: #f5f1e8;
+  --color-ink-soft: #a8a29a;
+  --color-gold: #d4af37;
+  --color-gold-soft: #4a3f1f;
+  --color-available: #2f7a6d;
+  --color-available-soft: #16302b;
+  --color-selected: #d4af37;
+  --color-taken: #55555e;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-soft);
+  border-radius: 999px;
+}
